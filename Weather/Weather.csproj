@@ -82,6 +82,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GoIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoIn.Designer.cs">
+      <DependentUpon>GoIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Fact.cs" />
     <Compile Include="Models\Forecast.cs" />
     <Compile Include="Form1.cs">
@@ -97,6 +103,9 @@
     <Compile Include="WeatherResponse.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoIn.resx">
+      <DependentUpon>GoIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -31,7 +31,10 @@ namespace Weather
         {
             HttpClient client = new HttpClient();
             var url = "https://api.weather.yandex.ru/v2/forecast/?lat=55.889742&lon=37.444826";
-            const string key = "bacdb292-db72-4551-b1a4-d768f9a22992";
+            
+            GoIn goIn = new GoIn();
+
+            string key = goIn.textBox1.Text;
             client.DefaultRequestHeaders.Add("X-Yandex-API-Key", key);
             //try
             //{
@@ -42,15 +45,13 @@ namespace Weather
 
             WeatherResponse weatherResponse = JsonConvert.DeserializeObject<WeatherResponse>(jsonRespons);
 
-            textInfoRes.Text = weatherResponse.fact.temp.ToString();
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
+            label1.Text = weatherResponse.fact.temp.ToString();
 
         }
 
         
+
+        
+
     }
 }
